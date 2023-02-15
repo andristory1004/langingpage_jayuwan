@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        
+      },
       margin:{
         '760' : '768px'
       },

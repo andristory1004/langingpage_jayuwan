@@ -3,6 +3,8 @@ import Navbar from './navbar'
 import WelcomePage from './welcome_page'
 import Head from 'next/head'
 
+import React from 'react'
+
 
 export default function RootLayout({
   children,

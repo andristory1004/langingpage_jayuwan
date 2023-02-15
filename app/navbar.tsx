@@ -16,7 +16,7 @@ export default function Navbar() {
                     <div className="space-x-8 text-lg font-semibold flex items-center">
                         <Link href="/" className="hover:scale-110 transition-all">Home</Link>
                         <Link href="#shop" scroll={false} className="hover:scale-110 transition-all">Shop</Link>
-                        <Link href="#service" scroll={false} className="hover:scale-110 transition-all">Service</Link>
+                        <Link href="#service" className="hover:scale-110 transition-all">Service</Link>
                         <Link href="#about" scroll={false} className="hover:scale-110 transition-all">About</Link>
                         <Link href="#contact" scroll={false} className="hover:scale-110 transition-all">Contact</Link>
                     </div>

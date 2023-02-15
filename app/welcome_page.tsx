@@ -5,6 +5,9 @@ import Link from "next/link"
 import Navbar from "./navbar"
 import Image from "next/image"
 import asset1 from '../public/images/Asset 1.png'
+import mockup from '../public/images/mockup.png'
+import card from '../public/images/card.png'
+import struk from '../public/images/srtruk.png'
 
 export default function WelcomePage() {
     return (
@@ -14,9 +17,7 @@ export default function WelcomePage() {
                 <Navbar></Navbar>
                 <div className="flex absolute px-20 pt-24 z-10 w-full">
                     <motion.div
-                        className=" w-1/2 font-Raleway pr-20"
-
-                    >
+                        className=" w-1/2 font-Raleway pr-20">
                         <motion.p
                             className="text-5xl font-bold"
 
@@ -77,7 +78,7 @@ export default function WelcomePage() {
                     </motion.div>
 
                     <motion.div
-                        className="-mt-16"
+                        className="w-1/2 flex flex-col justify-center items-center"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{
@@ -85,25 +86,39 @@ export default function WelcomePage() {
                             duration: 0.5
                         }}
                     >
-                        <div className="flex flex-col justify-center items-center">
-                            <Image src={asset1} alt="" className=" h-96px w-768px scale-75 object-contain relative z-10"></Image>
-                            <div className="static w-72 h-16 bg-black rounded-full blur-2xl -mt-20  z-10"></div>
+
+                        <div className="flex justify-center items-end relative z-20">
+                            <motion.div
+                                className="-mr-10 order-1"
+                                initial={{ opacity: 0, x: 100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    delay: 1.5,
+                                    duration: 0.5
+                                }}
+                            >
+                                <Image src={card} alt="" className=" object-contain "></Image>
+                            </motion.div>
+                            <motion.div
+                                className="-ml-10 order-3"
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    delay: 1.5,
+                                    duration: 0.5
+                                }}
+                            >
+                                <Image src={struk} alt="" className=" object-contain "></Image>
+                            </motion.div>
+                            <div className="-mt-16 order-2">
+                                <Image src={mockup} alt="" className=" object-contain relative"></Image>
+                            </div>
                         </div>
+                        <div className="static w-72 h-16 bg-black rounded-full blur-2xl -mt-16 "></div>
+
                     </motion.div>
                 </div>
             </div>
-            <motion.div id='shop' className='h-screen'>
-
-            </motion.div>
-            <motion.div id='service' className='h-screen bg-red'>
-
-            </motion.div>
-            <motion.div id='about' className='h-screen bg-yellow-300'>
-
-            </motion.div>
-            <motion.div id='contact' className='h-screen bg-green-300'>
-                <Link href="/" scroll={false}>fsfdsf</Link>
-            </motion.div>
         </>
     )
 }
